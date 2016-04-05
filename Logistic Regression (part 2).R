@@ -21,7 +21,7 @@ pred_model[pred>0.5]<-"1"
 table(pred_model,testLogit$Choice)
 #make table with accurary percentages
 table(pred_model==testLogit$Choice)/length(testLogit$Choice)
-#remove A and B following count, as well as, A and B mentions received
+#remove A and B following count
 train<-read.csv("C:/Users/source/Documents/train.csv",header=TRUE,sep=",")
 train$Choice<-as.factor(train$Choice)
 options(scipen=999)
