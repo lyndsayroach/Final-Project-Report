@@ -25,10 +25,10 @@ table(pred_model==testLogit$Choice)/length(testLogit$Choice)
 train<-read.csv("C:/Users/source/Documents/train.csv",header=TRUE,sep=",")
 train$Choice<-as.factor(train$Choice)
 options(scipen=999)
-train<-train[c(-3,-5,-9,-14,-16,-20)]
+train<-train[c(-3,-9,-14,-20)]
 str(train)
 #create formula where the dependent variable is Choice
-tmp<-paste(names(train[1]),"~",paste(names(train[2:17]),collapse="+"))
+tmp<-paste(names(train[1]),"~",paste(names(train[2:19]),collapse="+"))
 formula<-as.formula(tmp)
 formula
 #split training data into training and testing sets 
